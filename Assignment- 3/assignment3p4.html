@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout Task</title>
+    <style>
+        body {
+    background-color: #ffffff; /Sets the background color to white/
+    color: #333; 
+    margin: 0; 
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif
+  }
+
+  /* General image styles */
+  img {
+      max-width: 100%; /* Ensures images do not exceed their container width*/
+      display: block; /* Removes default inline behavior of images*/
+  }
+  
+  /*Logo styles */
+  .logo {
+    font-size: 200%; /Doubles the font size/
+    padding: 50px 20px; /* Adds 50px padding on top/bottom and 20px on left/right */
+    margin: 0 auto; /*Centers the logo horizontally */
+    max-width: 980px; /Limits the width to 980px
+  }
+  
+  /*Grid container styles */
+  .grid {
+    margin: 0 auto; /* Centers the grid horizontally */
+    padding: 0 20px; /* Adds 20px padding on left and right */
+    max-width: 980px; /* Limits the width to 980px */
+    display: flex; /* Uses flexbox for layout */
+  }
+  
+  /*  Navigation bar styles */ 
+  nav {
+    background-color: #000; /Sets background color to black/
+    padding: .5em; /* Adds padding */
+  }
+  
+  nav ul {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    list-style: none; /*Removes bullet points from list items */ 
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Equal spacing between items */
+  }
+  
+  nav a {
+    color: #fff; /*Sets link color to white */
+    text-decoration: none; /Removes underline from links/
+    padding: .5em 1em; /*Adds padding to links */
+  }
+  
+  /* Photo gallery styles */
+  .photos {
+    list-style: none; /* Removes bullet points from list items*/
+    margin: 0; /*Removes default margin */
+    padding: 0;
+    display: grid; /*Uses CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto)); /*Creates columns with a minimum width of 100px */
+    gap: 1px; /* Adds a 1px gap between grid items */
+  }
+
+  /* Feature image styles */
+  .feature {
+    width: 200px; /*Sets a fixed width */
+    float: left; /* Floats the element to the left */
+    padding-bottom: 5px; /* Adds padding to the bottom */
+    padding-left: 5px; /* Adds padding to the left */
+    
+  }
+
+  article img.feature {
+    float: left;
+    margin: 0 10px 10px 0; /* Add margin for spacing */
+    max-width: 50%; /* Set a maximum width for responsiveness */
+  }
+
+  main {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: 1fr 1fr; /* Two columns of equal size */
+    grid-gap: 10px; /* Add spacing between columns */
+  }
+  
+  article, aside {
+    padding: 10px; /* Add padding for content */
+  }
+
+  aside .photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal size */
+    grid-gap: 1px; /* Add a small gap between images */
+  }
+  
+  aside .photos li {
+    margin: 0; /* Remove margin from list items */
+  }
+  
+  aside .photos img {
+    width: 100%; /* Make images fill the width of their grid cell */
+  }
+  
+  /* Media query for responsiveness */
+@media (max-width: 515px) {
+    main {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+  
+    article img.feature {
+      float: none; 
+      display: block; /* Displays image as block element */
+      margin: 10px auto; /* Center the image on smaller screens */
+      max-width: 100%; /* Adjust to fit the content area */
+    }
+}
+    </style>
+  </head>
+
+<body>
+
+  <div class="logo">
+    My exciting website!
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <a href="">Blog</a>
+      </li>
+      <li>
+        <a href="">About us</a>
+      </li>
+      <li>
+        <a href="">Our history</a>
+      </li>
+      <li>
+        <a href="">Contacts</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="grid">
+    <article>
+      <h1>
+        An Exciting Blog Post
+      </h1>
+      <img src="images/balloon-sq6.jpg" alt="placeholder" class="feature">
+      <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
+        azuki bean garlic.</p>
+
+      <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens
+        dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+
+      <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon
+        napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.
+        Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram
+        corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress.
+        Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+      <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie
+        turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki
+        bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
+
+      <p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle
+        seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
+
+    </article>
+
+    <aside>
+      <h2>
+        Photography
+      </h2>
+      <ul class="photos">
+        <li>
+          <img src="images/balloon-sq1.jpg" alt="placeholder">
+        </li>
+        <li>
+          <img src="images/balloon-sq2.jpg" alt="placeholder">
+        </li>
+        <li>
+          <img src="images/balloon-sq3.jpg" alt="placeholder">
+        </li>
+        <li>
+          <img src="images/balloon-sq4.jpg" alt="placeholder">
+        </li>
+        <li>
+          <img src="images/balloon-sq5.jpg" alt="placeholder">
+        </li>
+      </ul>
+
+    </aside>
+  </main>
+
+</body>
+
+</html>
